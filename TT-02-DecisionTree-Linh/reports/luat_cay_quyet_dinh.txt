@@ -1,0 +1,31 @@
+|--- num__TotalWorkingYears <= 2.50
+|   |--- num__StockOptionLevel <= 0.50
+|   |   |--- num__MonthlyIncome <= 2486.50
+|   |   |   |--- class: Yes
+|   |   |--- num__MonthlyIncome >  2486.50
+|   |   |   |--- class: Yes
+|   |--- num__StockOptionLevel >  0.50
+|   |   |--- class: Yes
+|--- num__TotalWorkingYears >  2.50
+|   |--- cat__OverTime_Yes <= 0.50
+|   |   |--- num__NumCompaniesWorked <= 4.50
+|   |   |   |--- num__YearsWithCurrManager <= 0.50
+|   |   |   |   |--- class: No
+|   |   |   |--- num__YearsWithCurrManager >  0.50
+|   |   |   |   |--- class: No
+|   |   |--- num__NumCompaniesWorked >  4.50
+|   |   |   |--- num__Age <= 37.50
+|   |   |   |   |--- class: Yes
+|   |   |   |--- num__Age >  37.50
+|   |   |   |   |--- class: No
+|   |--- cat__OverTime_Yes >  0.50
+|   |   |--- num__MonthlyIncome <= 4001.50
+|   |   |   |--- num__Age <= 33.50
+|   |   |   |   |--- class: Yes
+|   |   |   |--- num__Age >  33.50
+|   |   |   |   |--- class: Yes
+|   |   |--- num__MonthlyIncome >  4001.50
+|   |   |   |--- num__StockOptionLevel <= 0.50
+|   |   |   |   |--- class: Yes
+|   |   |   |--- num__StockOptionLevel >  0.50
+|   |   |   |   |--- class: No
