@@ -1,0 +1,38 @@
+{
+  "best_params": {
+    "knn__metric": "euclidean",
+    "knn__n_neighbors": 15,
+    "knn__weights": "distance"
+  },
+  "accuracy": 0.7337662337662337,
+  "precision": 0.6444444444444445,
+  "recall": 0.5370370370370371,
+  "f1_score": 0.5858585858585859,
+  "classification_report": {
+    "Không bệnh": {
+      "precision": 0.7706422018348624,
+      "recall": 0.84,
+      "f1-score": 0.8038277511961722,
+      "support": 100.0
+    },
+    "Mắc bệnh": {
+      "precision": 0.6444444444444445,
+      "recall": 0.5370370370370371,
+      "f1-score": 0.5858585858585859,
+      "support": 54.0
+    },
+    "accuracy": 0.7337662337662337,
+    "macro avg": {
+      "precision": 0.7075433231396535,
+      "recall": 0.6885185185185185,
+      "f1-score": 0.694843168527379,
+      "support": 154.0
+    },
+    "weighted avg": {
+      "precision": 0.7263910401525081,
+      "recall": 0.7337662337662337,
+      "f1-score": 0.7273970049089666,
+      "support": 154.0
+    }
+  }
+}
