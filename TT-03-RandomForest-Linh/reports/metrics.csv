@@ -1,0 +1,15 @@
+metric,value
+auc_with_duration,0.9473175326666353
+auc_without_duration,0.783378417024388
+dummy_auc,0.5050864722392566
+decision_tree_auc,0.7917332480305675
+random_forest_auc,0.7862567957214963
+random_forest_pr_auc,0.43078618022890347
+oob_score,0.8914719271623672
+improvement_over_single_tree,-0.005476452309071234
+best_n_estimators,500
+best_auc_from_curve,0.7866815651681683
+top_feature_default,age
+top_feature_permutation,pdays_clean
+precision_at_5000,0.1594
+lift_at_5000,1.4150185344827584
