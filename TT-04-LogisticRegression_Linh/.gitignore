@@ -1,30 +1,28 @@
-# Virtual environment
-.venv/
+# --- Môi trường ảo Python ---
 venv/
+.venv/
 env/
+ENV/
+.venv_*/
 
-# Python cache
+# --- Python cache/build ---
 __pycache__/
 *.py[cod]
-
-# Jupyter Notebook
-.ipynb_checkpoints/
-
-# VS Code
-.vscode/
-
-# Python build files
+*$py.class
+*.egg-info/
 build/
 dist/
-*.egg-info/
 
-# Logs
-*.log
+# --- Jupyter ---
+.ipynb_checkpoints/
 
-# OS files
+# --- IDE ---
+.vscode/
+.idea/
+
+# --- OS ---
 .DS_Store
 Thumbs.db
 
-# Temporary files
-*.tmp
-*.temp
+# --- Log ---
+*.log
