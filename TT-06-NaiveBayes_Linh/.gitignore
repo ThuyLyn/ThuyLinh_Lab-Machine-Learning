@@ -1,0 +1,32 @@
+# --- Môi trường ảo Python ---
+venv/
+.venv/
+env/
+ENV/
+.venv_*/
+
+# --- Python cache/build ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+build/
+dist/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- IDE ---
+.vscode/
+.idea/
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- Model & artifact lớn (tuỳ chọn: bỏ comment nếu không muốn commit) ---
+# models/*.joblib
+# data/*.csv
+
+# --- Log ---
+*.log
