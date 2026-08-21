@@ -65,10 +65,10 @@ intention is to have a realistic predictive model"*.
 
 | Chỉ số | Giá trị |
 |---|---|
-| OOB score | | 0.8915
-| ROC-AUC (test, không duration) | | 0.7863
-| PR-AUC (test) | | 0.4308
-| Precision@5000 | | 0.1594
-| Lift@5000 | | 1.42x so với gọi ngẫu nhiên
-| ROC-AUC cây đơn (baseline) so với Random Forest | | 0.7917
+| OOB score | 0.8915 | 
+| ROC-AUC (test, không duration) | 0.7863 | 
+| PR-AUC (test) | 0.4308 | 
+| Precision@5000 | 0.1594 |
+| Lift@5000 | 1.42x so với gọi ngẫu nhiên | 
+| ROC-AUC cây đơn (baseline) so với Random Forest | 0.7917 | 
 
