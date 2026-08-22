@@ -1,0 +1,101 @@
+{
+  "scale_comparison_on_validation": {
+    "recall_no_scale": 0.8605,
+    "recall_scaled": 0.9767
+  },
+  "kernel_comparison_on_validation": {
+    "linear": 0.9767,
+    "rbf": 0.9767,
+    "poly": 0.7209
+  },
+  "grid_search": {
+    "scoring": "fbeta(beta=2, pos_label=malignant) trên CV=5 của TRAIN",
+    "best_params": {
+      "svm__C": 10,
+      "svm__gamma": 0.001,
+      "svm__kernel": "rbf"
+    },
+    "best_cv_score": 0.9697
+  },
+  "support_vectors": {
+    "per_class": [
+      27,
+      45
+    ],
+    "total": 72,
+    "train_size": 341,
+    "pct_of_train": 21.11
+  },
+  "threshold_selection": {
+    "evaluated_on": "VALIDATION (không phải test)",
+    "target_recall": 0.98,
+    "scan": [
+      {
+        "threshold": 0.05,
+        "recall": 1.0,
+        "precision": 0.7413793103448276
+      },
+      {
+        "threshold": 0.1,
+        "recall": 1.0,
+        "precision": 0.8431372549019608
+      },
+      {
+        "threshold": 0.15,
+        "recall": 1.0,
+        "precision": 0.8775510204081632
+      },
+      {
+        "threshold": 0.2,
+        "recall": 0.9534883720930233,
+        "precision": 0.9318181818181818
+      },
+      {
+        "threshold": 0.25,
+        "recall": 0.9534883720930233,
+        "precision": 0.9318181818181818
+      },
+      {
+        "threshold": 0.3,
+        "recall": 0.9534883720930233,
+        "precision": 0.9534883720930233
+      },
+      {
+        "threshold": 0.35,
+        "recall": 0.9534883720930233,
+        "precision": 0.9761904761904762
+      },
+      {
+        "threshold": 0.4,
+        "recall": 0.9302325581395349,
+        "precision": 0.975609756097561
+      },
+      {
+        "threshold": 0.45,
+        "recall": 0.9302325581395349,
+        "precision": 1.0
+      },
+      {
+        "threshold": 0.5,
+        "recall": 0.9302325581395349,
+        "precision": 1.0
+      }
+    ],
+    "chosen_threshold": 0.15,
+    "recall_at_chosen_on_validation": 1.0,
+    "precision_at_chosen_on_validation": 0.8776,
+    "tradeoff_note": "Ngưỡng thấp hơn làm recall cao hơn nhưng precision thấp hơn -> nhiều ca lành tính bị gán nhầm 'nghi ác tính', dẫn đến sinh thiết/xét nghiệm thêm không cần thiết."
+  },
+  "final_test_evaluation": {
+    "note": "TEST chỉ được dùng 1 lần duy nhất cho đánh giá cuối cùng",
+    "threshold_used": 0.15,
+    "recall_malignant": 1.0,
+    "precision_malignant": 0.7925,
+    "missed_malignant_cases": 0,
+    "test_size": 114
+  },
+  "logreg_baseline_comparison": {
+    "logreg_recall_malignant_test": 0.9762,
+    "svm_recall_malignant_test": 1.0
+  }
+}
