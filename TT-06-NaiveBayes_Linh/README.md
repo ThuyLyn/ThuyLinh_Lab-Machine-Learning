@@ -14,7 +14,7 @@ TT-06-NaiveBayes/
 │   └── naive_bayes_sms.ipynb   
 ├── src/
 │   └── train.py                
-├── data/
+├── dataset/
 │   └── spam.csv                
 ├── models/
 │   ├── nb_pipeline.joblib       
