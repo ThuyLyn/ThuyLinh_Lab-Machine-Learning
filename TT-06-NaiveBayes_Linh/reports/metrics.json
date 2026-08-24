@@ -1,0 +1,15 @@
+{
+  "threshold": 0.5649556944458224,
+  "test_precision_spam": 0.9830508474576272,
+  "test_recall_spam": 0.8854961832061069,
+  "test_f1_spam": 0.9317269076305221,
+  "best_params": {
+    "multinomialnb__alpha": 0.1,
+    "tfidfvectorizer__ngram_range": [
+      1,
+      2
+    ]
+  },
+  "train_time_sec": 0.08771910006180406,
+  "avg_predict_ms": 0.4778919997625053
+}
