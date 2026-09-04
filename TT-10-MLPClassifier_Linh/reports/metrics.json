@@ -1,0 +1,58 @@
+{
+  "acc_logistic_regression": 0.9210714285714285,
+  "acc_mlp_khong_chuan_hoa": 0.9708571428571429,
+  "acc_mlp_co_chuan_hoa_128_64": 0.9796428571428571,
+  "kien_truc": {
+    "candidates": [
+      {
+        "arch": "(64,)",
+        "acc_val": 0.9730357142857143,
+        "n_params": 50890,
+        "time_s": 15.708282709121704
+      },
+      {
+        "arch": "(128,)",
+        "acc_val": 0.97625,
+        "n_params": 101770,
+        "time_s": 40.719873905181885
+      },
+      {
+        "arch": "(128, 64)",
+        "acc_val": 0.9782142857142857,
+        "n_params": 109386,
+        "time_s": 51.59479570388794
+      },
+      {
+        "arch": "(256, 128, 64)",
+        "acc_val": 0.9792857142857143,
+        "n_params": 242762,
+        "time_s": 190.93470740318298
+      }
+    ],
+    "best_arch": "(256, 128, 64)",
+    "best_acc_val": 0.9792857142857143,
+    "best_acc_test": 0.9765714285714285
+  },
+  "activation_results_val": {
+    "relu": 0.9782142857142857,
+    "tanh": 0.9771428571428571,
+    "logistic": 0.9741071428571428
+  },
+  "learning_rate_results_val": {
+    "0.01": 0.9725,
+    "0.001": 0.9782142857142857,
+    "0.0001": 0.9739285714285715
+  },
+  "confusion_top_nham_lan": {
+    "that": 4,
+    "doan": 9,
+    "so_lan": 26
+  },
+  "human_in_the_loop_99": {
+    "n_auto": 13540,
+    "n_manual": 460,
+    "acc_auto": 0.9935007385524373,
+    "acc_overall": 0.9796428571428571
+  },
+  "acc_pipeline_deployed": 0.9765714285714285
+}
