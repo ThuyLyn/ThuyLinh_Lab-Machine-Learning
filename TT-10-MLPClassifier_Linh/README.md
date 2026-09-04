@@ -1,6 +1,5 @@
 # TT-10 — MLP Classifier: Đọc số viết tay trên séc / phiếu chuyển khoản
 
-**Họ tên:** _(điền tên bạn)_
 **Dữ liệu dùng:** MNIST thật qua `sklearn.datasets.fetch_openml('mnist_784', ...)` — 70.000 ảnh 28×28, 10 lớp.
 Train: 50.400 | Validation: 5.600 | Test: 14.000
 *(Validation được tách riêng từ tập train, chỉ dùng để CHỌN kiến trúc/activation/learning rate — không dùng để chọn hyperparameter trên test nhằm tránh rò rỉ dữ liệu. Test chỉ dùng đúng một lần để báo cáo số liệu cuối.)*
