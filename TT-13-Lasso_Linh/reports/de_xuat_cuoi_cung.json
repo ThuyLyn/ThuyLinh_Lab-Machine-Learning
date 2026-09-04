@@ -1,0 +1,16 @@
+{
+  "bo_chi_so_de_xuat": [
+    "bmi",
+    "bp",
+    "s3",
+    "s5",
+    "chi_so_nhieu_009"
+  ],
+  "so_luong": 5,
+  "chi_phi_ban_dau_dong": 5000000,
+  "chi_phi_de_xuat_dong": 125000,
+  "tiet_kiem_phan_tram": 97.5,
+  "rmse_lasso_test": 53.728,
+  "rmse_debiased_test": 53.739,
+  "alpha_toi_uu": 7.92483
+}
