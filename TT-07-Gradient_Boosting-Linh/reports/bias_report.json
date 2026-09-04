@@ -1,48 +1,55 @@
 {
-  "sex": {
-    "Male": {
+  "sex": [
+    {
+      "group": "Male",
       "n": 10860,
-      "positive_rate_predicted": 0.2490791896869245,
-      "positive_rate_actual": 0.2998158379373849,
+      "predicted_positive_rate": 0.2490791896869245,
+      "actual_positive_rate": 0.2998158379373849,
       "avg_predicted_probability": 0.2989609176800213
     },
-    "Female": {
+    {
+      "group": "Female",
       "n": 5421,
-      "positive_rate_predicted": 0.07839881940601365,
-      "positive_rate_actual": 0.10883600811658366,
+      "predicted_positive_rate": 0.07839881940601365,
+      "actual_positive_rate": 0.10883600811658366,
       "avg_predicted_probability": 0.11242918169289123
     }
-  },
-  "race": {
-    "Black": {
+  ],
+  "race": [
+    {
+      "group": "Black",
       "n": 1561,
-      "positive_rate_predicted": 0.0800768737988469,
-      "positive_rate_actual": 0.11467008327994875,
+      "predicted_positive_rate": 0.0800768737988469,
+      "actual_positive_rate": 0.11467008327994875,
       "avg_predicted_probability": 0.12630054376800037
     },
-    "White": {
+    {
+      "group": "White",
       "n": 13946,
-      "positive_rate_predicted": 0.2051484296572494,
-      "positive_rate_actual": 0.2502509680195038,
+      "predicted_positive_rate": 0.2051484296572494,
+      "actual_positive_rate": 0.2502509680195038,
       "avg_predicted_probability": 0.25041327068997193
     },
-    "Asian-Pac-Islander": {
+    {
+      "group": "Asian-Pac-Islander",
       "n": 480,
-      "positive_rate_predicted": 0.24375,
-      "positive_rate_actual": 0.27708333333333335,
+      "predicted_positive_rate": 0.24375,
+      "actual_positive_rate": 0.27708333333333335,
       "avg_predicted_probability": 0.2644101245379041
     },
-    "Other": {
+    {
+      "group": "Other",
       "n": 135,
-      "positive_rate_predicted": 0.08888888888888889,
-      "positive_rate_actual": 0.18518518518518517,
+      "predicted_positive_rate": 0.08888888888888889,
+      "actual_positive_rate": 0.18518518518518517,
       "avg_predicted_probability": 0.1436769881467897
     },
-    "Amer-Indian-Eskimo": {
+    {
+      "group": "Amer-Indian-Eskimo",
       "n": 159,
-      "positive_rate_predicted": 0.09433962264150944,
-      "positive_rate_actual": 0.11949685534591195,
+      "predicted_positive_rate": 0.09433962264150944,
+      "actual_positive_rate": 0.11949685534591195,
       "avg_predicted_probability": 0.12869361584897546
     }
-  }
+  ]
 }
