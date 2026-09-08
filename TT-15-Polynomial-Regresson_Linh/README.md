@@ -1,4 +1,4 @@
-# TT-15-Polynomial-HoTen
+# TT-15-Polynomial
 
 Polynomial Regression trên bài toán Combined Cycle Power Plant: dự báo công suất phát (PE) từ nhiệt độ môi trường và các biến vận hành.
 
