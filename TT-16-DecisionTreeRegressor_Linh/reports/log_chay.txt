@@ -1,0 +1,62 @@
+======================================================================
+TT-16 — DECISION TREE REGRESSOR — ĐỊNH GIÁ CƯỚC TAXI (DỮ LIỆU THẬT)
+======================================================================
+
+[BƯỚC 1] Đọc dữ liệu thật từ D:\TT_ML\TT-16-DecisionTreeRegressor_Linh\dataset\yellow_tripdata_2026-01.parquet
+  -> Số dòng đọc được từ file gốc: 3,724,889
+  -> Số dòng sau khi lấy mẫu: 200,000
+
+[BƯỚC 2] Làm sạch dữ liệu
+  - Loại vì fare_amount <= 0             :   2,290 dòng
+  - Loại vì trip_distance <=0 hoặc >100  :   6,540 dòng
+  - Loại vì passenger_count == 0         :  54,088 dòng
+  -> Còn lại sau làm sạch: 137,082 / 200,000 dòng (68.5%)
+
+  [!] RÒ RỈ DỮ LIỆU: KHÔNG đưa tip_amount, tolls_amount, total_amount
+      vào đặc trưng X, vì chúng chỉ biết SAU khi chuyến đi kết thúc.
+
+[BƯỚC 3] Tạo đặc trưng thời gian
+  -> Đặc trưng sử dụng: ['trip_distance', 'passenger_count', 'PULocationID', 'DOLocationID', 'hour', 'dow', 'is_rush_hour']
+
+[BƯỚC 4] EDA
+  -> Đã lưu reports/eda_overview.png
+
+[BƯỚC 5] Baseline
+  - DummyRegressor (mean)           MAE = 12.05
+  - Công thức thủ công (3 + 2*km)   MAE = 9.63
+
+[BƯỚC 6] Cây không giới hạn độ sâu (chứng minh overfit)
+  - Số lá: 90,316 | Số tầng: 41
+  - MAE train = 0.010  (gần 0 -> cây 'học thuộc' dữ liệu)
+  - MAE test  = 3.602  (cao hơn nhiều -> OVERFIT rõ ràng)
+
+[BƯỚC 7] Quét max_depth từ 1 đến 20
+  -> Độ sâu có MAE test thấp nhất: 15 (MAE = 3.041)
+  -> Đề bài chọn max_depth=5 để ƯU TIÊN khả năng tra bảng bằng tay,
+     dù có thể không phải điểm tối ưu thống kê tuyệt đối.
+  -> Đã lưu reports/mae_theo_depth.png
+
+[BƯỚC 8] Vẽ hàm dự đoán theo quãng đường (bậc thang)
+  -> Đã lưu reports/ham_bac_thang.png
+  -> Số mức giá (lá) tối đa có thể trả ra: 27
+
+[BƯỚC 9] Xuất cây dạng text và hình ảnh
+  -> Đã lưu reports/cay_quyet_dinh.txt
+  -> Đã lưu reports/cay_quyet_dinh.png
+
+[BƯỚC 10] Xuất bảng tra cước CSV cho tổng đài
+  -> Đã lưu outputs/bang_tra_cuoc.csv (27 mức giá)
+
+[BƯỚC 11] Kiểm tra sai số ±15%
+  - MAE  = 3.20
+  - MAPE = 20.23%
+  - RMSE = 7.51
+  - % chuyến sai số trong ±15%: 53.0%
+
+[BƯỚC 12] So sánh với Random Forest và Linear Regression
+  - Decision Tree (depth=5)  MAE = 3.20
+  - Linear Regression        MAE = 3.40
+  - Random Forest            MAE = 2.90
+  -> Đã lưu reports/so_sanh_mo_hinh.png
+
+-> Đã lưu models/tree_reg.joblib
