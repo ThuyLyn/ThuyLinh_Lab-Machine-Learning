@@ -23,3 +23,5 @@ reports/
 
 # Ignore all Parquet files trong dataset
 dataset/*.parquet
+
+*.parquet
