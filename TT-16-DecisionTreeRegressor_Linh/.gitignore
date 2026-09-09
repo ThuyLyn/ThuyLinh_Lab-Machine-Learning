@@ -1,0 +1,25 @@
+# Không push file Parquet
+*.parquet
+
+# Nếu muốn bỏ qua cả thư mục dữ liệu
+data/
+datasets/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Model / output
+models/
+reports/
+
+# Ignore all Parquet files trong dataset
+dataset/*.parquet
