@@ -1,0 +1,95 @@
+{
+  "baseline": {
+    "Dummy": {
+      "rmse": 22704.23535747973,
+      "r2": -5.741993791552602e-08
+    },
+    "Linear Regression": {
+      "rmse": 6761.711966814748,
+      "r2": 0.9113049059754775
+    },
+    "Cây đơn (TT-16)": {
+      "rmse": 3532.430815199737,
+      "r2": 0.9757934111336507
+    }
+  },
+  "random_forest": {
+    "oob_score": 0.9863674248153866,
+    "rmse": 2694.420508768525,
+    "r2": 0.9859162918875766
+  },
+  "rmse_theo_so_cay": {
+    "10": 2761.763110478829,
+    "30": 2709.23746250893,
+    "50": 2702.548603516983,
+    "100": 2698.6992413351945,
+    "200": 2696.4177316049095,
+    "300": 2694.4205087685245,
+    "500": 2694.031674390918
+  },
+  "permutation_importance": [
+    {
+      "feature": "class",
+      "importance_mean": 1.7223620770313264,
+      "importance_std": 0.0054157965273332895
+    },
+    {
+      "feature": "duration",
+      "importance_mean": 0.1436046168623189,
+      "importance_std": 0.0009399494638699233
+    },
+    {
+      "feature": "airline",
+      "importance_mean": 0.049334340957154985,
+      "importance_std": 0.0004967882311879777
+    },
+    {
+      "feature": "source_city",
+      "importance_mean": 0.04755513611145708,
+      "importance_std": 0.0004099004140828811
+    },
+    {
+      "feature": "destination_city",
+      "importance_mean": 0.04731094411728034,
+      "importance_std": 0.00046671627648597376
+    },
+    {
+      "feature": "days_left",
+      "importance_mean": 0.03063623930902055,
+      "importance_std": 0.0004556299031358521
+    },
+    {
+      "feature": "arrival_time",
+      "importance_mean": 0.01644446703112885,
+      "importance_std": 0.0002670795241595905
+    },
+    {
+      "feature": "departure_time",
+      "importance_mean": 0.012269332238887754,
+      "importance_std": 7.558205997418421e-05
+    },
+    {
+      "feature": "stops",
+      "importance_mean": 0.007888905667305135,
+      "importance_std": 0.000321079954657335
+    }
+  ],
+  "pdp_days_left": {
+    "gia_tb_14_ngay": 23860.157118558433,
+    "gia_tb_7_ngay": 25003.99922030123,
+    "chenh_lech": 1143.8421017427972
+  },
+  "khoang_du_bao": {
+    "ti_le_phu": 0.8649697656210957
+  },
+  "ngoai_suy": {
+    "49": 7303.9367142857145,
+    "60": 7303.9367142857145,
+    "100": 7303.9367142857145,
+    "500": 7303.9367142857145
+  },
+  "xgboost": {
+    "rmse": 3459.7660325519123,
+    "r2": 0.976779043674469
+  }
+}
