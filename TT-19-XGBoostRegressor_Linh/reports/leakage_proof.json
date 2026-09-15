@@ -1,0 +1,8 @@
+{
+  "leak_columns_used": [
+    "casual",
+    "registered"
+  ],
+  "r2_with_leak": 0.9976245164871216,
+  "rmse_with_leak": 10.746157292046778
+}
