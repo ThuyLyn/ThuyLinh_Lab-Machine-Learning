@@ -1,0 +1,62 @@
+{
+  "Dummy": {
+    "rmse": 1.14488282082338,
+    "r2": -0.00026533332827671785
+  },
+  "Linear": {
+    "rmse": 0.8906411180299926,
+    "r2": 0.39466104529399126
+  },
+  "KNN_khong_scale": {
+    "rmse": 1.058219360856418
+  },
+  "KNN_scaled_K5": {
+    "rmse": 0.6031893674035941
+  },
+  "best_K": 22,
+  "K1_train_rmse": 0.0,
+  "K1_test_rmse": 0.757820426075836,
+  "weights": {
+    "uniform": 0.5936218360068929,
+    "distance": 0.5898618385531859
+  },
+  "metric": {
+    "euclidean": 0.5898618385531859,
+    "manhattan": 0.5674373597427257
+  },
+  "location_weight": {
+    "1": 0.5898618385531859,
+    "2": 0.5550380418707114,
+    "3": 0.533903355679566,
+    "5": 0.509141302197123
+  },
+  "best_location_weight": 5,
+  "model_comparison": {
+    "Linear": {
+      "RMSE": 0.8906,
+      "R2": 0.3947,
+      "train_time_s": 0.003,
+      "predict_time_ms_per_sample": 0.00017,
+      "giai_thich_duoc": "Có"
+    },
+    "KNN": {
+      "RMSE": 0.5899,
+      "R2": 0.7345,
+      "train_time_s": 0.016,
+      "predict_time_ms_per_sample": 0.03714,
+      "giai_thich_duoc": "Có"
+    },
+    "RandomForest": {
+      "RMSE": 0.5022,
+      "R2": 0.8076,
+      "train_time_s": 1.907,
+      "predict_time_ms_per_sample": 0.01178,
+      "giai_thich_duoc": "Một phần"
+    }
+  },
+  "scaling_time_ms_per_sample": {
+    "1": 0.03716800101967745,
+    "5": 0.04913952461508817,
+    "10": 0.04211795884509419
+  }
+}
