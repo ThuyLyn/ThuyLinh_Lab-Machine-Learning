@@ -2,3 +2,4 @@
 # Dataset CSV
 # =========================
 *.txt
+*.DS_Store
