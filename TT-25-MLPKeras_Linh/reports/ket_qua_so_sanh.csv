@@ -1,0 +1,8 @@
+model,pr_auc,precision_at_3000,train_seconds,notes
+LightGBM (baseline),0.3675,0.421,2.9,class_weight=balanced
+MLP cơ bản,0.3672,0.419,41.0,
+"MLP + Dropout/BN (128, 64)",0.3724,0.419,80.5,class_weight=balanced
+"MLP + Dropout/BN (64,)",0.362,0.4087,68.0,class_weight=balanced
+"MLP + Dropout/BN (256, 128, 64)",0.3705,0.422,88.3,class_weight=balanced
+"MLP + Dropout/BN (128, 64) (không class_weight)",0.3738,0.4227,65.2,class_weight=None
+MLP + Embedding,0.3744,0.4227,70.7,15213 tham số

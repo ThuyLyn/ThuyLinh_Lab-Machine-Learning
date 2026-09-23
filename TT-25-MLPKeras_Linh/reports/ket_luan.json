@@ -1,0 +1,51 @@
+[
+  {
+    "model": "LightGBM (baseline)",
+    "pr_auc": 0.3675,
+    "precision_at_3000": 0.421,
+    "train_seconds": 2.9,
+    "notes": "class_weight=balanced"
+  },
+  {
+    "model": "MLP cơ bản",
+    "pr_auc": 0.3672,
+    "precision_at_3000": 0.419,
+    "train_seconds": 41.0,
+    "notes": ""
+  },
+  {
+    "model": "MLP + Dropout/BN (128, 64)",
+    "pr_auc": 0.3724,
+    "precision_at_3000": 0.419,
+    "train_seconds": 80.5,
+    "notes": "class_weight=balanced"
+  },
+  {
+    "model": "MLP + Dropout/BN (64,)",
+    "pr_auc": 0.362,
+    "precision_at_3000": 0.4087,
+    "train_seconds": 68.0,
+    "notes": "class_weight=balanced"
+  },
+  {
+    "model": "MLP + Dropout/BN (256, 128, 64)",
+    "pr_auc": 0.3705,
+    "precision_at_3000": 0.422,
+    "train_seconds": 88.3,
+    "notes": "class_weight=balanced"
+  },
+  {
+    "model": "MLP + Dropout/BN (128, 64) (không class_weight)",
+    "pr_auc": 0.3738,
+    "precision_at_3000": 0.4227,
+    "train_seconds": 65.2,
+    "notes": "class_weight=None"
+  },
+  {
+    "model": "MLP + Embedding",
+    "pr_auc": 0.3744,
+    "precision_at_3000": 0.4227,
+    "train_seconds": 70.7,
+    "notes": "15213 tham số"
+  }
+]

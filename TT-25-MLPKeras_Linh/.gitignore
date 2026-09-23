@@ -1,0 +1,12 @@
+# Không push file Parquet
+*.parquet
+
+# Nếu muốn bỏ qua cả thư mục dữ liệu
+data/
+datasets/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
