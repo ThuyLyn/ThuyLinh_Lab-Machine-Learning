@@ -1,0 +1,14 @@
+{
+  "threshold": 0.19,
+  "test": {
+    "threshold": 0.19,
+    "fn": 6,
+    "fp": 118,
+    "tp": 384,
+    "tn": 116
+  },
+  "class_names": [
+    "NORMAL",
+    "PNEUMONIA"
+  ]
+}

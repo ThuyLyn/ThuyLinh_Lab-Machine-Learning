@@ -2,7 +2,6 @@
 data/
 
 # Model
-models/*.keras
 models/*.h5
 models/*.joblib
 
