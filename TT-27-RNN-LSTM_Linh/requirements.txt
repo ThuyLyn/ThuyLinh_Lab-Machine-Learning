@@ -1,0 +1,6 @@
+tensorflow>=2.15
+xgboost>=2.0
+pandas>=2.0
+numpy
+scikit-learn
+matplotlib
