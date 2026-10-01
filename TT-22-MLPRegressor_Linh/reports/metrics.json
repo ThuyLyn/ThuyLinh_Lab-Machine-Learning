@@ -1,0 +1,79 @@
+{
+  "n_train": 318,
+  "n_test": 80,
+  "selected": {
+    "arch": [
+      64,
+      32
+    ],
+    "alpha": 0.1,
+    "activation": "relu"
+  },
+  "selection_method": "RepeatedKFold(5x3) tren tap train; test chi dung 1 lan",
+  "final": [
+    {
+      "model": "DummyRegressor",
+      "cv_rmse_val_mean": 7.953,
+      "cv_rmse_val_std": 0.524,
+      "cv_rmse_train_mean": 7.911,
+      "cv_r2_val_mean": -0.0385,
+      "overfit_gap": 0.041,
+      "overfit_gap_std": 0.657,
+      "rmse_test": 7.347,
+      "r2_test": -0.004,
+      "train_time_s": 0.026
+    },
+    {
+      "model": "LinearRegression",
+      "cv_rmse_val_mean": 3.47,
+      "cv_rmse_val_std": 0.274,
+      "cv_rmse_train_mean": 3.357,
+      "cv_r2_val_mean": 0.7995,
+      "overfit_gap": 0.113,
+      "overfit_gap_std": 0.338,
+      "rmse_test": 2.888,
+      "r2_test": 0.8449,
+      "train_time_s": 0.002
+    },
+    {
+      "model": "RandomForest",
+      "cv_rmse_val_mean": 2.964,
+      "cv_rmse_val_std": 0.353,
+      "cv_rmse_train_mean": 1.123,
+      "cv_r2_val_mean": 0.8519,
+      "overfit_gap": 1.841,
+      "overfit_gap_std": 0.397,
+      "rmse_test": 2.13,
+      "r2_test": 0.9157,
+      "train_time_s": 0.105
+    },
+    {
+      "model": "SVR",
+      "cv_rmse_val_mean": 3.535,
+      "cv_rmse_val_std": 0.384,
+      "cv_rmse_train_mean": 3.364,
+      "cv_r2_val_mean": 0.794,
+      "overfit_gap": 0.172,
+      "overfit_gap_std": 0.47,
+      "rmse_test": 2.68,
+      "r2_test": 0.8665,
+      "train_time_s": 0.006
+    },
+    {
+      "model": "MLP (best by CV)",
+      "cv_rmse_val_mean": 2.953,
+      "cv_rmse_val_std": 0.313,
+      "cv_rmse_train_mean": 2.55,
+      "cv_r2_val_mean": 0.8533,
+      "overfit_gap": 0.403,
+      "overfit_gap_std": 0.4,
+      "rmse_test": 2.105,
+      "r2_test": 0.9176,
+      "train_time_s": 0.191
+    }
+  ],
+  "mlp_minus_rf_rmse_test_ci95": [
+    -0.40448671506468836,
+    0.3224280973710045
+  ]
+}
