@@ -2,7 +2,7 @@
 TT-16 — DECISION TREE REGRESSOR — ĐỊNH GIÁ CƯỚC TAXI (DỮ LIỆU THẬT)
 ======================================================================
 
-[BƯỚC 1] Đọc dữ liệu thật từ D:\TT_ML\TT-16-DecisionTreeRegressor_Linh\dataset\yellow_tripdata_2026-01.parquet
+[BƯỚC 1] Đọc dữ liệu thật từ dataset\yellow_tripdata_2026-01.parquet
   -> Số dòng đọc được từ file gốc: 3,724,889
   -> Số dòng sau khi lấy mẫu: 200,000
 
@@ -17,23 +17,27 @@ TT-16 — DECISION TREE REGRESSOR — ĐỊNH GIÁ CƯỚC TAXI (DỮ LIỆU TH�
 
 [BƯỚC 3] Tạo đặc trưng thời gian
   -> Đặc trưng sử dụng: ['trip_distance', 'passenger_count', 'PULocationID', 'DOLocationID', 'hour', 'dow', 'is_rush_hour']
+  -> TEST được 'khoá' đến BƯỚC 11: mọi lựa chọn siêu tham số
+     đều làm bằng cross-validation trên TRAIN.
 
 [BƯỚC 4] EDA
   -> Đã lưu reports/eda_overview.png
 
 [BƯỚC 5] Baseline
-  - DummyRegressor (mean)           MAE = 12.05
-  - Công thức thủ công (3 + 2*km)   MAE = 9.63
+  - DummyRegressor (mean)             MAE = 12.05
+  - Công thức thủ công (3 + 2*dặm)    MAE = 9.63
 
 [BƯỚC 6] Cây không giới hạn độ sâu (chứng minh overfit)
   - Số lá: 90,316 | Số tầng: 41
   - MAE train = 0.010  (gần 0 -> cây 'học thuộc' dữ liệu)
   - MAE test  = 3.602  (cao hơn nhiều -> OVERFIT rõ ràng)
 
-[BƯỚC 7] Quét max_depth từ 1 đến 20
-  -> Độ sâu có MAE test thấp nhất: 15 (MAE = 3.041)
-  -> Đề bài chọn max_depth=5 để ƯU TIÊN khả năng tra bảng bằng tay,
-     dù có thể không phải điểm tối ưu thống kê tuyệt đối.
+[BƯỚC 7] Quét max_depth 1..20 bằng 5-fold CV trên TẬP TRAIN
+  -> Độ sâu tốt nhất theo CV (MAE val)     : 14 (CV MAE = 3.135)
+  -> Độ sâu theo quy tắc 1-SE (gọn nhất)   : 10
+  -> max_depth=5 (ràng buộc nghiệp vụ): CV MAE = 3.284, kém tối ưu CV 0.149 USD (4.8%)
+  -> Chọn depth=5 để tổng đài tra bảng bằng tay; đã ĐO cái giá phải trả
+     bằng CV (không nhìn test), không phải là chọn theo cảm tính.
   -> Đã lưu reports/mae_theo_depth.png
 
 [BƯỚC 8] Vẽ hàm dự đoán theo quãng đường (bậc thang)
@@ -45,9 +49,14 @@ TT-16 — DECISION TREE REGRESSOR — ĐỊNH GIÁ CƯỚC TAXI (DỮ LIỆU TH�
   -> Đã lưu reports/cay_quyet_dinh.png
 
 [BƯỚC 10] Xuất bảng tra cước CSV cho tổng đài
-  -> Đã lưu outputs/bang_tra_cuoc.csv (27 mức giá)
+  Vấn đề cũ: cây tách thêm theo LocationID/giờ nên cùng một khoảng dặm
+  xuất hiện ở nhiều lá -> km_min/km_max chồng lấn, tra nhầm.
+  Cách sửa: cây tra cứu riêng chỉ dùng ['trip_distance', 'is_rush_hour']; mỗi dòng bảng là
+  (giờ cao điểm?) x (khoảng dặm) với cận lấy từ ĐƯỜNG ĐI của cây.
+  -> Đã lưu outputs/bang_tra_cuoc.csv (27 mức giá) | kiểm tra không chồng lấn: ĐẠT
+  -> Cây tra cứu: MAE test = 3.22 | ±15% = 53.6%
 
-[BƯỚC 11] Kiểm tra sai số ±15%
+[BƯỚC 11] Đánh giá cuối trên TEST (chỉ chạy 1 lần, sau khi đã chốt mô hình)
   - MAE  = 3.20
   - MAPE = 20.23%
   - RMSE = 7.51
@@ -59,4 +68,8 @@ TT-16 — DECISION TREE REGRESSOR — ĐỊNH GIÁ CƯỚC TAXI (DỮ LIỆU TH�
   - Random Forest            MAE = 2.90
   -> Đã lưu reports/so_sanh_mo_hinh.png
 
--> Đã lưu models/tree_reg.joblib
+-> Đã lưu models/tree_reg.joblib, models/tree_lookup.joblib
+
+======================================================================
+HOÀN TẤT
+======================================================================
