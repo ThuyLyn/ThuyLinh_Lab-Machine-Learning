@@ -1,0 +1,7 @@
+statsmodels>=0.14
+pandas
+numpy
+matplotlib
+scipy
+jupyter
+nbformat
