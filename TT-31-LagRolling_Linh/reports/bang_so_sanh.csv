@@ -1,0 +1,6 @@
+,MAE,MAPE
+Naive (hôm qua),0.2239,21.1921
+Seasonal naive (tuần trước),0.2583,27.1846
+Ridge,0.1917,20.7415
+RandomForest,0.1856,19.6575
+XGBoost,0.1793,18.3975
