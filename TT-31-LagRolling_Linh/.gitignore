@@ -1,1 +1,5 @@
 data/
+
+*.json
+*.csv
+!xgb_power.json
