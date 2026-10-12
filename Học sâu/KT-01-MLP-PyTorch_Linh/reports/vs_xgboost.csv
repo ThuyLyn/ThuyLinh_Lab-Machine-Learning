@@ -1,0 +1,3 @@
+model,test_PR_AUC,train_seconds,so_sieu_tham_so_chinh
+MLP (PyTorch),0.6367,1.8347,"~8 (lr, batch, dropout x2, wd, patience, kiến trúc...)"
+XGBoost,0.6474,0.1657,"~3 (n_estimators, depth, lr)"
