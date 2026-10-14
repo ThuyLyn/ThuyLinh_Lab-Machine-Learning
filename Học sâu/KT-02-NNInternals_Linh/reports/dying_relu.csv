@@ -1,0 +1,13 @@
+activation,lr,số lần chạy,phân kỳ (NaN),% neuron chết sau lr lớn,% neuron chết sau hạ lr,val acc sau hạ lr (%)
+ReLU,0.05,3,0,6.0,5.6,96.7
+ReLU,0.2,3,0,2.2,3.1,97.3
+ReLU,0.5,3,0,2.1,2.8,97.1
+ReLU,1.0,3,0,42.1,39.6,91.9
+ReLU,2.0,3,0,87.6,87.6,10.2
+ReLU,5.0,3,0,87.3,87.3,10.1
+LeakyReLU,0.05,3,0,5.7,5.6,96.6
+LeakyReLU,0.2,3,0,2.3,3.1,97.2
+LeakyReLU,0.5,3,0,2.8,3.4,97.2
+LeakyReLU,1.0,3,1,42.7,44.2,84.0
+LeakyReLU,2.0,3,3,,,
+LeakyReLU,5.0,3,3,,,
